@@ -5,6 +5,15 @@
   --primary-color: #9356dc;
   --secondary-color: #ff79da;
   --tertiary-color: #99e2d0;
+  --background-color: #eaeaea;
+  --backgroun-color-section: #f6f6f6;
+  --box-shadow: 0 4px 6px rgba(10, 10, 10, 0.22);
+}
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+body {
+  width: 100%;
+  margin: 0px;
 }
 .main-container {
   display: flex;
@@ -18,40 +27,174 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .navbar__logo {
+
+  &__logo {
     width: 197px;
     height: 36px;
   }
-  .navbar__search {
+  &__search {
     display: flex;
     width: 100%;
     height: 50px;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 15px;
     background-color: #eaeaea;
-    border: solid 4px black opacity(0.1);
+    box-shadow: 0 4px 6px rgba(10, 10, 10, 0.22);
+    border-top: solid 4px rgba(10, 10, 10, 0.065);
 
-    .navbar__search__input-button {
-      width: 49px;
-      height: 49px;
+    &__input-button,
+    &__input-text {
       border: none;
-      background-color: #eaeaea;
+      background: var(--backgroun-color-header);
+    }
+    &__input-button {
       padding: 0px;
-      cursor: pointer;
+
       i {
         font-size: 18px;
       }
     }
-    .navbar__search__input-text {
-      height: 49px;
-      border: none;
-      background-color: #eaeaea;
-    }
-    .navbar__search__input-text::placeholder {
-      color: black;
-      font-size: medium;
-      font-weight: bold;
+    &__input-text {
+      height: 47px;
+      margin-left: 17px;
+      &::placeholder {
+        color: black;
+        font-size: medium;
+        font-weight: bold;
+      }
     }
   }
+}
+.info {
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--backgroun-color-section);
+  box-sizing: border-box;
+
+  &__title,
+  &__subtitle {
+    display: flex;
+    margin: 0px;
+    text-align: center;
+  }
+  &__title {
+    width: 73%;
+  }
+  &__subtitle {
+    width: 84%;
+  }
+  &__button {
+    height: 50px;
+    background: linear-gradient(
+      to bottom right,
+      lighten($secondary-color, 7px),
+      darken($primary-color, 0%) 100%
+    );
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+  }
+}
+.fonction {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  padding: 20px;
+  gap: 20px;
+  box-sizing: border-box;
+  &___title {
+    width: 100%;
+    display: flex;
+  }
+
+  &__bloc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    box-sizing: border-box;
+    &__button {
+      height: 73px;
+      background-color: var(--backgroun-color-section);
+      width: 96%;
+      border: none;
+      box-shadow: var(--box-shadow);
+      border-radius: 20px;
+      padding: 0px;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+}
+.card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+
+  img {
+    object-fit: cover;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+}
+.restaurant {
+  width: 95.5%;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  &__cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.restaurant-cards .card {
+  margin-top: 33px;
+  box-sizing: border-box;
+  padding: 0px;
+}
+
+.restaurant-cards img {
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.restaurant-cards .card-content {
+  display: flex;
+  width: 100%;
+  height: 59px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.restaurant-cards .card-title {
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.restaurant-cards .card-subtitle {
+  margin: 0;
 }
