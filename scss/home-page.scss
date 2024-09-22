@@ -44,7 +44,7 @@ a {
     align-items: center;
     margin-top: 15px;
     background-color: #eaeaea;
-    box-shadow: 0 4px 6px rgba(10, 10, 10, 0.22);
+    box-shadow: 0 4px 6px rgba(10, 10, 10, 0.3);
     border-top: solid 4px rgba(10, 10, 10, 0.065);
 
     &__input-button,
@@ -95,10 +95,19 @@ a {
   &__button {
     height: 50px;
     background: linear-gradient(
-      to bottom right,
-      lighten($secondary-color, 7px),
-      darken($primary-color, 0%) 100%
+      to bottom,
+      darken($secondary-color, 0%),
+      darken($primary-color, 10%) 200%
     );
+    &:hover {
+      background: linear-gradient(
+        to bottom,
+        lighten($secondary-color, 0%),
+        lighten($primary-color, 10%) 200%
+      );
+      box-shadow: 0 4px 6px rgba(30, 30, 30, 0.4);
+    }
+
     color: white;
     margin-top: 10px;
     margin-bottom: 30px;
@@ -235,8 +244,38 @@ a {
         i {
           padding: 25px 20px 0px 0px;
           font-size: 21px;
+          width: 21px;
+          height: 22px;
           color: white;
           -webkit-text-stroke: 1px black;
+        }
+        .heart-checkbox {
+          display: none; /* Cache l'input checkbox */
+        }
+
+        .heart-label {
+          cursor: pointer;
+
+          i {
+            display: inline-block;
+            transition: background 0.3s ease;
+            background-clip: text; /* Version standard */
+            -webkit-background-clip: text; /* Version préfixée pour WebKit */
+            -webkit-text-fill-color: transparent;
+            background-size: cover;
+          }
+        }
+
+        .heart-checkbox:checked + .heart-label i {
+          background: linear-gradient(
+            to bottom,
+            darken($secondary-color, 0%),
+            darken($primary-color, 10%) 200%
+          );
+          background-clip: text; /* Version standard */
+          -webkit-background-clip: text; /* Version préfixée pour WebKit */
+          -webkit-text-fill-color: transparent;
+          background-size: cover;
         }
       }
       &__new {

@@ -48,7 +48,7 @@ a {
   align-items: center;
   margin-top: 15px;
   background-color: #eaeaea;
-  box-shadow: 0 4px 6px rgba(10, 10, 10, 0.22);
+  box-shadow: 0 4px 6px rgba(10, 10, 10, 0.3);
   border-top: solid 4px rgba(10, 10, 10, 0.065);
 }
 .navbar__search__input-button, .navbar__search__input-text {
@@ -94,7 +94,7 @@ a {
 }
 .info__button {
   height: 50px;
-  background: linear-gradient(to bottom right, #ff9de4, #9356dc 100%);
+  background: linear-gradient(to bottom, #ff79da, #782cd3 200%);
   color: white;
   margin-top: 10px;
   margin-bottom: 30px;
@@ -105,6 +105,10 @@ a {
   font-weight: bold;
   cursor: pointer;
   box-shadow: var(--box-shadow);
+}
+.info__button:hover {
+  background: linear-gradient(to bottom, #ff79da, #ae80e5 200%);
+  box-shadow: 0 4px 6px rgba(30, 30, 30, 0.4);
 }
 
 .fonction {
@@ -225,8 +229,31 @@ a {
 .restaurant .blocCards__card__card-content i {
   padding: 25px 20px 0px 0px;
   font-size: 21px;
+  width: 21px;
+  height: 22px;
   color: white;
   -webkit-text-stroke: 1px black;
+}
+.restaurant .blocCards__card__card-content .heart-checkbox {
+  display: none; /* Cache l'input checkbox */
+}
+.restaurant .blocCards__card__card-content .heart-label {
+  cursor: pointer;
+}
+.restaurant .blocCards__card__card-content .heart-label i {
+  display: inline-block;
+  transition: background 0.3s ease;
+  background-clip: text; /* Version standard */
+  -webkit-background-clip: text; /* Version préfixée pour WebKit */
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
+}
+.restaurant .blocCards__card__card-content .heart-checkbox:checked + .heart-label i {
+  background: linear-gradient(to bottom, #ff79da, #782cd3 200%);
+  background-clip: text; /* Version standard */
+  -webkit-background-clip: text; /* Version préfixée pour WebKit */
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
 }
 .restaurant .blocCards__card__new {
   display: flex;
