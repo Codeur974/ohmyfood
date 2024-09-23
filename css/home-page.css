@@ -27,6 +27,13 @@ a {
   flex-direction: column;
   justify-content: center;
   padding: 0px;
+  background-color: var(--backgroun-color-section);
+}
+@media (min-width: 1440px) {
+  .main-container {
+    max-width: 1440px; /* Limite la largeur maximale à 1440px */
+    margin: auto; /* Centre le contenu */
+  }
 }
 
 .navbar {
@@ -92,6 +99,15 @@ a {
 .info__subtitle {
   width: 84%;
 }
+@media (min-width: 768px) {
+  .info__title, .info__subtitle {
+    width: 100%;
+    justify-content: center;
+  }
+  .info__title {
+    font-size: 40px;
+  }
+}
 .info__button {
   height: 50px;
   background: linear-gradient(to bottom, #ff79da, #782cd3 200%);
@@ -119,6 +135,17 @@ a {
   padding: 20px;
   gap: 20px;
   box-sizing: border-box;
+  background: white;
+}
+@media (min-width: 768px) {
+  .fonction {
+    padding: 50px 30px;
+  }
+}
+@media (min-width: 1025px) {
+  .fonction {
+    padding: 50px 180px;
+  }
 }
 .fonction___title {
   width: 100%;
@@ -171,12 +198,18 @@ a {
   font-size: 14px; /* Taille du texte */
   font-weight: bold; /* Poids du texte */
 }
+@media (min-width: 768px) {
+  .fonction__bloc {
+    flex-direction: row;
+  }
+}
 
 .card {
   background-color: white;
   border-radius: 20px;
   padding: 0px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  width: auto;
 }
 .card img {
   object-fit: cover;
@@ -266,6 +299,35 @@ a {
   right: 20px;
   font-size: small;
 }
+@media (min-width: 767.8px) {
+  .restaurant .blocCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 50px;
+    padding: 0px;
+    margin-bottom: 25px;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurant .blocCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 100px;
+    margin-bottom: 25px;
+  }
+}
+@media (min-width: 767.8px) {
+  .restaurant {
+    padding: 0 30px;
+    margin-bottom: 0px;
+  }
+}
+@media (min-width: 1025px) {
+  .restaurant {
+    padding: 0 180px;
+    margin-bottom: 0px;
+  }
+}
 
 .footer {
   width: 100%;
@@ -275,28 +337,81 @@ a {
   padding: 25px 22px;
   height: 186px;
   background-color: black;
+  box-sizing: border-box;
+  padding: 0 30px;
+  margin-bottom: 0px;
+}
+@media (min-width: 767.8px) {
+  .footer {
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+  }
 }
 .footer__logo {
-  width: 138px;
-  height: 27px;
+  width: 100px;
+  height: 24px;
   filter: invert(1);
   margin-bottom: 20px;
+  padding: 0 30px;
+  margin-bottom: 0px;
+}
+@media (min-width: 767.8px) {
+  .footer__logo {
+    order: 1;
+    padding: 0px 40px;
+    margin-bottom: 30px;
+  }
 }
 .footer__list {
   color: white;
+  padding: 0 30px;
+  margin-bottom: 0px;
+}
+@media (min-width: 767.8px) {
+  .footer__list {
+    display: flex;
+  }
 }
 .footer__list ul {
   padding: 0;
   margin: 0; /* Enlève le margin des listes */
   list-style: none; /* Enlève les puces des éléments <li> */
 }
+@media (min-width: 767.8px) {
+  .footer__list ul {
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+}
 .footer__list--primary {
   font-weight: bold; /* Met le texte en gras */
+}
+.footer__list--secondary {
+  /* Réduit la taille du texte */
+}
+@media (min-width: 767.8px) {
+  .footer__list--secondary {
+    gap: 10px;
+    margin-bottom: 0px;
+  }
+}
+.footer__list--secondary, .footer__list--primary {
+  display: flex;
+  gap: 10px;
 }
 .footer__list li {
   list-style-type: none; /* Enlève les puces des éléments <li> */
   padding: 0; /* Enlève le padding des éléments <li> */
   margin: 10px 0; /* Ajoute un espace entre les éléments <li> */
+  padding: 0 30px;
+  margin-bottom: 0px;
+}
+@media (min-width: 767.8px) {
+  .footer__list li {
+    display: flex;
+    padding: 0px;
+  }
 }
 .footer__list i {
   margin-right: 15px;
