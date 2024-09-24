@@ -37,11 +37,12 @@ a {
 }
 
 .navbar {
-  height: 113px;
+  height: 115px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 .navbar__logo {
   display: flex;
@@ -54,8 +55,8 @@ a {
   z-index: 12;
 }
 .navbar__logo__img {
-  width: 200px;
-  height: 35px;
+  width: 180px;
+  height: 30px;
 }
 .navbar__search {
   display: flex;
@@ -76,15 +77,16 @@ a {
 }
 .navbar__search__input-button i {
   font-size: 18px;
+  margin-left: 60px;
 }
 .navbar__search__input-text {
   height: 47px;
-  margin-left: 17px;
+  margin-left: 20px;
 }
 .navbar__search__input-text::placeholder {
   color: black;
-  font-size: medium;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 500;
 }
 @media (min-width: 1024px) {
   .navbar__logo, .navbar__search {
@@ -109,6 +111,7 @@ a {
 }
 .info__title {
   width: 73%;
+  margin-top: 10px;
 }
 .info__subtitle {
   width: 84%;
@@ -126,7 +129,7 @@ a {
   height: 50px;
   background: linear-gradient(to bottom, #ff79da, #782cd3 200%);
   color: white;
-  margin: 10px 0 30px;
+  margin: 10px 0 25px;
   border: none;
   padding: 10px 20px;
   border-radius: 25px;
@@ -165,6 +168,9 @@ a {
   width: 100%;
   display: flex;
 }
+.fonction h2 {
+  margin-bottom: 0px;
+}
 .fonction__bloc {
   width: 100%;
   display: flex;
@@ -172,6 +178,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: 25px;
+  margin-bottom: 40px;
   box-sizing: border-box;
 }
 .fonction__bloc__button {
@@ -217,6 +224,14 @@ a {
 @media (min-width: 768px) {
   .fonction__bloc {
     flex-direction: row;
+    margin-left: 10px;
+    padding-right: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .fonction__bloc {
+    margin-bottom: 0px;
+    gap: 30px;
   }
 }
 
@@ -236,7 +251,7 @@ a {
 
 .restaurant {
   padding: 10px;
-  margin-top: 30px;
+  margin-top: 15px;
   background-color: var(--backgroun-color-section);
 }
 .restaurant__title {
@@ -350,7 +365,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 30px;
+  padding: 22px 25px;
   height: auto;
   background-color: black;
   box-sizing: border-box;
