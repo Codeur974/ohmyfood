@@ -1,0 +1,287 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+:root {
+  --primary-color: #9356dc;
+  --secondary-color: #ff79da;
+  --tertiary-color: #99e2d0;
+  --background-color: #eaeaea;
+  --background-color-section: #f6f6f6;
+  --box-shadow: 0 4px 6px rgba(10, 10, 10, 0.22);
+}
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+body {
+  width: 100%;
+  margin: 0px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px;
+  background-color: var(--background-color-section);
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: white;
+  padding: 0 30px;
+  i {
+    font-size: 24px;
+  }
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 63px;
+
+    &__img {
+      width: 180px;
+      height: 30px;
+    }
+  }
+}
+.Image img {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+}
+.menu {
+  position: absolute;
+  background-color: var(--background-color-section);
+  width: 100%;
+  height: auto;
+  z-index: 10;
+  top: 283px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  box-sizing: border-box;
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 20px;
+
+    h1 {
+      line-height: 41px;
+      font-style: italic;
+      font-family: "shrikhand", serif;
+      font-weight: 400;
+      font-size: 28px;
+    }
+  }
+}
+.starter {
+  width: 100%;
+  padding: 15px 10px 15px 10px;
+  box-sizing: border-box;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__title h2 {
+    font-weight: 300;
+    position: relative;
+    padding: 3px;
+    font-size: 16px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -8px; /* Ajuste la position verticale de la bordure */
+      left: 6.5%;
+      transform: translateX(-50%);
+      width: 12%; /* Définit la largeur de la bordure à 50% du texte */
+      border-bottom: solid 4px var(--tertiary-color);
+    }
+  }
+  &__button {
+    display: flex;
+    flex-direction: column;
+
+    align-items: start;
+    height: 73px;
+    background-color: white;
+    width: 100%;
+    border: none;
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+    &__title {
+      margin: 0;
+      margin-bottom: 5px;
+    }
+    .starter__button__content {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .starter__button__subtitle {
+      margin: 0;
+      font-weight: 300;
+      line-height: 19px;
+      font-size: 14px;
+    }
+
+    .starter__button__price {
+      margin: 0;
+    }
+  }
+}
+.resto__button {
+  display: flex;
+  justify-content: center;
+  &__order {
+    height: 50px;
+    width: 50%;
+    background: linear-gradient(
+      to bottom,
+      darken($secondary-color, 0%),
+      darken($primary-color, 10%) 200%
+    );
+
+    color: white;
+    margin: 30px 0 45px 0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: transform 7s ease, box-shadow 0.3s ease; /* Ajoute une transition pour l'animation */
+
+    &:hover {
+      background: linear-gradient(
+        to bottom,
+        lighten($secondary-color, 0%),
+        lighten($primary-color, 10%) 200%
+      );
+
+      box-shadow: 0 12px 24px rgba(30, 30, 30, 0.2); /* Ajoute une ombre plus grande au survol */
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 22px 25px;
+  height: auto;
+  background-color: black;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  z-index: 10;
+
+  @media (min-width: 767.8px) {
+    flex-direction: row;
+    justify-content: flex-end; /* Aligne les éléments à droite pour les grands écrans */
+    align-items: flex-end;
+    height: 114px;
+  }
+
+  &__logo {
+    width: 126px;
+    height: 22px;
+    filter: invert(1);
+
+    margin-bottom: 20px;
+
+    @media (min-width: 767.8px) {
+      order: 1;
+      padding: 0 40px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__list {
+    color: white;
+
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 767.8px) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0; /* Enlève le margin des listes */
+      list-style: none; /* Enlève les puces des éléments <li> */
+
+      @media (min-width: 767.8px) {
+        padding: 0 20px;
+      }
+    }
+
+    &--primary {
+      font-weight: bold; /* Met le texte en gras */
+    }
+
+    &--secondary {
+      @media (min-width: 767.8px) {
+        gap: 8px;
+        margin-bottom: 0;
+      }
+    }
+
+    &--secondary,
+    &--primary {
+      display: flex;
+
+      flex-direction: column;
+      @media (min-width: 767.8px) {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+      }
+    }
+
+    li {
+      list-style-type: none; /* Enlève les puces des éléments <li> */
+      padding: 0; /* Enlève le padding des éléments <li> */
+      margin: 5px 0; /* Ajoute un espace entre les éléments <li> */
+
+      @media (min-width: 767.8px) {
+        display: flex;
+        padding: 0;
+        gap: 20px;
+        margin: 0px;
+      }
+    }
+
+    i {
+      width: 11px;
+      height: 15px;
+      margin-right: 20px;
+      @media (min-width: 767.8px) {
+        margin-right: 0px;
+      }
+    }
+  }
+}

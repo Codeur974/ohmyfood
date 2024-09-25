@@ -8,7 +8,7 @@
   --secondary-color: #ff79da;
   --tertiary-color: #99e2d0;
   --background-color: #eaeaea;
-  --backgroun-color-section: #f6f6f6;
+  --background-color-section: #f6f6f6;
   --box-shadow: 0 4px 6px rgba(10, 10, 10, 0.22);
 }
 
@@ -27,11 +27,10 @@ a {
   flex-direction: column;
   justify-content: center;
   padding: 0px;
-  background-color: var(--backgroun-color-section);
+  background-color: var(--background-color-section);
 }
 @media (min-width: 1440px) {
   .main-container {
-    max-width: 1440px; /* Limite la largeur maximale à 1440px */
     margin: auto; /* Centre le contenu */
   }
 }
@@ -70,7 +69,7 @@ a {
 }
 .navbar__search__input-button, .navbar__search__input-text {
   border: none;
-  background: var(--backgroun-color-header);
+  background: var(--background-color-header);
 }
 .navbar__search__input-button {
   padding: 0px;
@@ -101,7 +100,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  background-color: var(--backgroun-color-section);
+  background-color: var(--background-color-section);
   box-sizing: border-box;
 }
 .info__title, .info__subtitle {
@@ -187,7 +186,7 @@ a {
   justify-content: start;
   align-items: center;
   height: 73px;
-  background-color: var(--backgroun-color-section);
+  background-color: var(--background-color-section);
   width: 96%;
   border: none;
   box-shadow: var(--box-shadow);
@@ -252,7 +251,7 @@ a {
 .restaurant {
   padding: 10px;
   margin-top: 15px;
-  background-color: var(--backgroun-color-section);
+  background-color: var(--background-color-section);
 }
 .restaurant__title {
   width: 100%;
