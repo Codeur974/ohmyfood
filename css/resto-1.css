@@ -22,6 +22,14 @@ a {
   text-decoration: none;
 }
 
+h4 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
 .main-container {
   flex: 1;
   display: flex;
@@ -72,6 +80,7 @@ a {
   box-sizing: border-box;
 }
 .menu__title {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -81,6 +90,22 @@ a {
   font-size: 18px;
   padding: 0 20px;
 }
+.menu__title i {
+  position: absolute;
+  right: 40px;
+}
+.menu__title .fas {
+  color: transparent;
+  background: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease;
+}
+.menu__title:hover .fas {
+  opacity: 1;
+}
 .menu__title h1 {
   line-height: 41px;
   font-style: italic;
@@ -89,62 +114,107 @@ a {
   font-size: 28px;
 }
 
-.starter {
-  width: 100%;
-  padding: 15px 10px 15px 10px;
+.menu__card {
+  padding: 10px;
+}
+.menu__card__title {
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.menu__card__title span {
+  padding-bottom: 5px;
+  border-bottom: solid 4px #99e2d0;
+}
+.menu__card .menu-element {
+  display: flex;
+  overflow: hidden;
+  align-items: end;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 20px;
   box-sizing: border-box;
 }
-.starter__title {
-  margin-bottom: 20px;
+.menu__card .menu-element__description {
+  padding: 1rem 0 1rem 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.starter__title h2 {
-  font-weight: 300;
-  position: relative;
-  padding: 3px;
-  font-size: 16px;
+.menu__card .menu-element__description h4,
+.menu__card .menu-element__description p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.starter__title h2::after {
-  content: "";
-  position: absolute;
-  bottom: -8px; /* Ajuste la position verticale de la bordure */
-  left: 6.5%;
-  transform: translateX(-50%);
-  width: 12%; /* Définit la largeur de la bordure à 50% du texte */
-  border-bottom: solid 4px var(--tertiary-color);
+.menu__card .menu-element__description p {
+  margin-top: 4px;
+  font-size: 15px;
 }
-.starter__button {
+.menu__card .menu-element__prix {
+  margin-bottom: 30px;
+  font-weight: 900;
+  margin-left: auto;
+  margin-bottom: 0;
+  padding: 1rem 1rem 1rem 0;
+}
+.menu__card .menu-element__check {
   display: flex;
-  flex-direction: column;
-  align-items: start;
-  height: 73px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--tertiary-color);
+  width: 4rem;
+  height: 74px;
+  margin-right: -4rem;
+  transition: margin-right 0.5s ease;
+}
+.menu__card .menu-element__check__elips {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   background-color: white;
-  width: 100%;
-  border: none;
-  box-shadow: var(--box-shadow);
-  border-radius: 20px;
-  padding: 15px;
-  font-weight: 500;
-  font-size: 16px;
-  margin-top: 15px;
-  cursor: pointer;
-}
-.starter__button__title {
-  margin: 0;
-  margin-bottom: 5px;
-}
-.starter__button .starter__button__content {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 10px;
 }
-.starter__button .starter__button__subtitle {
-  margin: 0;
-  font-weight: 300;
-  line-height: 19px;
-  font-size: 14px;
+.menu__card .menu-element__check i {
+  color: #99e2d0;
+  font-size: medium;
 }
-.starter__button .starter__button__price {
-  margin: 0;
+.menu__card .menu-element:hover .menu-element__check {
+  margin-right: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.menu__card {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.menu__card:nth-of-type(1) {
+  animation-delay: 1.5s;
+}
+
+.menu__card:nth-of-type(2) {
+  animation-delay: 2.5s;
+}
+
+.menu__card:nth-of-type(3) {
+  animation-delay: 3.5s;
 }
 
 .resto__button {
@@ -154,7 +224,7 @@ a {
 .resto__button__order {
   height: 50px;
   width: 50%;
-  background: linear-gradient(to bottom, #ff79da, #782cd3 200%);
+  background: linear-gradient(to bottom, #ff79da, rgb(120, 43.75, 211.25));
   color: white;
   margin: 30px 0 45px 0;
   border: none;
@@ -164,10 +234,10 @@ a {
   font-weight: bold;
   cursor: pointer;
   box-shadow: var(--box-shadow);
-  transition: transform 7s ease, box-shadow 0.3s ease; /* Ajoute une transition pour l'animation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajoute une transition pour l'animation */
 }
 .resto__button__order:hover {
-  background: linear-gradient(to bottom, #ff79da, #ae80e5 200%);
+  background: linear-gradient(to bottom, rgb(255, 146.5, 225.0410447761), rgb(160.5, 107.125, 224.375));
   box-shadow: 0 12px 24px rgba(30, 30, 30, 0.2); /* Ajoute une ombre plus grande au survol */
 }
 

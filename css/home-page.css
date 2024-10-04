@@ -126,7 +126,7 @@ a {
 }
 .info__button {
   height: 50px;
-  background: linear-gradient(to bottom, #ff79da, #782cd3 200%);
+  background: linear-gradient(to bottom, #ff79da, rgb(120, 43.75, 211.25) 200%);
   color: white;
   margin: 10px 0 25px;
   border: none;
@@ -139,7 +139,7 @@ a {
   transition: transform 7s ease, box-shadow 0.3s ease; /* Ajoute une transition pour l'animation */
 }
 .info__button:hover {
-  background: linear-gradient(to bottom, #ff79da, #ae80e5 200%);
+  background: linear-gradient(to bottom, #ff79da, rgb(174, 128.25, 228.75) 200%);
   box-shadow: 0 12px 24px rgba(30, 30, 30, 0.2); /* Ajoute une ombre plus grande au survol */
 }
 
@@ -312,7 +312,7 @@ a {
   background-size: cover;
 }
 .restaurant .blocCards__card__card-content .heart-checkbox:checked + .heart-label i {
-  background: linear-gradient(to bottom, #ff79da, #782cd3 200%);
+  background: linear-gradient(to bottom, #ff79da, rgb(120, 43.75, 211.25) 200%);
   background-clip: text; /* Version standard */
   -webkit-background-clip: text; /* Version préfixée pour WebKit */
   -webkit-text-fill-color: transparent;
