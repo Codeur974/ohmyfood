@@ -1,0 +1,35 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --primary-color: #9356dc;
+  --secondary-color: #ff79da;
+  --tertiary-color: #99e2d0;
+  --background-color: #eaeaea;
+  --background-color-section: #f6f6f6;
+  --box-shadow: 0 4px 6px rgba(10, 10, 10, 0.22);
+}
+
+body {
+  width: 100%;
+  margin: 0px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px;
+  background-color: var(--background-color-section);
+}
+@media (min-width: 1440px) {
+  .main-container {
+    margin: auto; /* Centre le contenu */
+  }
+}
