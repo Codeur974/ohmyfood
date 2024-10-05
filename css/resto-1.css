@@ -70,6 +70,12 @@ img {
   height: 23vh;
   object-fit: cover;
 }
+@media (min-width: 1025px) {
+  img {
+    object-position: center-bottom;
+    height: 52vh;
+  }
+}
 
 .menu {
   position: relative;
