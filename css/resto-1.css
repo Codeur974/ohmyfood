@@ -13,8 +13,10 @@
 }
 
 body {
-  width: 100%;
-  margin: 0px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -31,12 +33,12 @@ p {
 }
 
 .main-container {
+  height: 100%;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0px;
-  background-color: var(--background-color-section);
 }
 
 .navbar {
@@ -62,33 +64,51 @@ p {
   height: 30px;
 }
 
-.Image img {
+img {
+  display: block;
   width: 100%;
-  height: 275px;
+  height: 23vh;
   object-fit: cover;
+}
+@media (min-width: 1025px) {
+  img {
+    height: 50vh;
+  }
 }
 
 .menu {
-  position: absolute;
+  position: relative;
   background-color: var(--background-color-section);
   width: 100%;
   height: auto;
-  z-index: 10;
-  top: 283px;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  border-radius: 2rem 2rem 0 0;
+  margin-top: -25px;
   box-sizing: border-box;
+  z-index: 10;
+}
+@media (min-width: 767.8px) {
+  .menu {
+    width: 73%;
+    margin: -25px auto;
+  }
 }
 .menu__title {
-  position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   padding: 20px 0;
   font-weight: bold;
   font-size: 18px;
   padding: 0 20px;
+}
+@media (min-width: 767.8px) {
+  .menu__title {
+    justify-content: center;
+  }
+  .menu__title h1 {
+    padding: 40px;
+    margin: 0;
+  }
 }
 .menu__title i {
   position: absolute;
@@ -116,6 +136,16 @@ p {
 
 .menu__card {
   padding: 10px;
+}
+@media (min-width: 767.8px) {
+  .menu__card {
+    padding: 0 30px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .menu__card {
+    padding: 0 200px;
+  }
 }
 .menu__card__title {
   font-weight: normal;
@@ -223,18 +253,23 @@ p {
 }
 .resto__button__order {
   height: 50px;
-  width: 50%;
+  width: 186px;
   background: linear-gradient(to bottom, #ff79da, rgb(120, 43.75, 211.25));
   color: white;
-  margin: 30px 0 45px 0;
   border: none;
   padding: 10px 20px;
+  margin: 5px 0px 35px 0px;
   border-radius: 25px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   box-shadow: var(--box-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajoute une transition pour l'animation */
+}
+@media (min-width: 767.8px) {
+  .resto__button__order {
+    margin-top: 20px;
+  }
 }
 .resto__button__order:hover {
   background: linear-gradient(to bottom, rgb(255, 146.5, 225.0410447761), rgb(160.5, 107.125, 224.375));
@@ -247,11 +282,9 @@ p {
   flex-direction: column;
   justify-content: center;
   padding: 22px 25px;
-  height: auto;
+  z-index: 10;
   background-color: black;
   box-sizing: border-box;
-  margin-bottom: 0;
-  z-index: 10;
 }
 @media (min-width: 767.8px) {
   .footer {
@@ -259,6 +292,7 @@ p {
     justify-content: flex-end; /* Aligne les éléments à droite pour les grands écrans */
     align-items: flex-end;
     height: 114px;
+    margin-top: 25px;
   }
 }
 .footer__logo {

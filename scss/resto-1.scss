@@ -11,10 +11,14 @@
 }
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
+
 body {
-  width: 100%;
-  margin: 0px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
+
 a {
   color: inherit;
   text-decoration: none;
@@ -26,13 +30,14 @@ p {
   margin: 0;
 }
 .main-container {
+  height: 100%;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0px;
-  background-color: var(--background-color-section);
 }
+
 .navbar {
   display: flex;
   justify-content: center;
@@ -56,32 +61,44 @@ p {
     }
   }
 }
-.Image img {
+img {
+  display: block;
   width: 100%;
-  height: 275px;
+  height: 23vh;
   object-fit: cover;
+
+  @media (min-width: 1025px) {
+    height: 50vh;
+  }
 }
 .menu {
-  position: absolute;
+  position: relative;
   background-color: var(--background-color-section);
   width: 100%;
   height: auto;
-  z-index: 10;
-  top: 283px;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  border-radius: 2rem 2rem 0 0;
+  margin-top: -25px;
   box-sizing: border-box;
+  z-index: 10;
+  @media (min-width: 767.8px) {
+    width: 73%;
+    margin: -25px auto;
+  }
   &__title {
-    position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-
     font-weight: bold;
     font-size: 18px;
     padding: 0 20px;
+    @media (min-width: 767.8px) {
+      justify-content: center;
+      h1 {
+        padding: 40px;
+        margin: 0;
+      }
+    }
 
     i {
       position: absolute;
@@ -111,6 +128,13 @@ p {
 }
 .menu__card {
   padding: 10px;
+
+  @media (min-width: 767.8px) {
+    padding: 0 30px;
+  }
+  @media screen and (min-width: 1025px) {
+    padding: 0 200px;
+  }
 
   &__title {
     font-weight: normal;
@@ -229,22 +253,26 @@ p {
 
   &__order {
     height: 50px;
-    width: 50%;
+    width: 186px;
     background: linear-gradient(
       to bottom,
       darken($secondary-color, 0%),
       darken($primary-color, 10%)
     );
     color: white;
-    margin: 30px 0 45px 0;
+
     border: none;
     padding: 10px 20px;
+    margin: 5px 0px 35px 0px;
     border-radius: 25px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     box-shadow: var(--box-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajoute une transition pour l'animation */
+    @media (min-width: 767.8px) {
+      margin-top: 20px;
+    }
 
     &:hover {
       background: linear-gradient(
@@ -264,17 +292,16 @@ p {
   flex-direction: column;
   justify-content: center;
   padding: 22px 25px;
-  height: auto;
+  z-index: 10;
   background-color: black;
   box-sizing: border-box;
-  margin-bottom: 0;
-  z-index: 10;
 
   @media (min-width: 767.8px) {
     flex-direction: row;
     justify-content: flex-end; /* Aligne les éléments à droite pour les grands écrans */
     align-items: flex-end;
     height: 114px;
+    margin-top: 25px;
   }
 
   &__logo {
