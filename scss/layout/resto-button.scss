@@ -1,0 +1,40 @@
+.resto__button {
+  display: flex;
+  justify-content: center;
+  @media (min-width: 767.8px) {
+    margin-bottom: 30px;
+  }
+
+  &__order {
+    height: 50px;
+    width: 186px;
+    background: linear-gradient(
+      to bottom,
+      darken($secondary-color, 0%),
+      darken($primary-color, 10%)
+    );
+    color: white;
+
+    border: none;
+    padding: 10px 20px;
+    margin: 5px 0px 35px 0px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajoute une transition pour l'animation */
+    @media (min-width: 767.8px) {
+      margin-top: 20px;
+    }
+
+    &:hover {
+      background: linear-gradient(
+        to bottom,
+        lighten($secondary-color, 5%),
+        lighten($primary-color, 5%)
+      );
+      box-shadow: 0 12px 24px rgba(30, 30, 30, 0.2); /* Ajoute une ombre plus grande au survol */
+    }
+  }
+}

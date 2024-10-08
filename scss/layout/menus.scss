@@ -1,0 +1,175 @@
+@use "../utils/mixins";
+.menu {
+  position: relative;
+  background-color: var(--background-color-section);
+  width: 100%;
+
+  border-radius: 2rem 2rem 0 0;
+  margin-top: -30px;
+  box-sizing: border-box;
+  z-index: 10;
+
+  @media (min-width: 767.8px) {
+    width: 73%;
+    margin: -25px auto;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 0;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 20px;
+
+    .heart-icon {
+      font-size: 1rem;
+      right: 1rem;
+      &::before {
+        @include mixins.heart;
+      }
+      &::after {
+        @include mixins.heart;
+        @include mixins.gradient;
+
+        opacity: 0;
+      }
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+
+    @media (min-width: 767.8px) {
+      justify-content: center;
+    }
+
+    h1 {
+      line-height: 41px;
+      font-style: italic;
+      font-family: "shrikhand", serif;
+      font-weight: 400;
+      font-size: 28px;
+    }
+  }
+}
+
+.menu__card {
+  padding: 10px;
+
+  @media (min-width: 767.8px) {
+    padding: 0 30px;
+  }
+  @media screen and (min-width: 1025px) {
+    padding: 0 200px;
+  }
+
+  &__title {
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+
+    span {
+      padding-bottom: 5px;
+      border-bottom: solid 4px #99e2d0;
+    }
+  }
+
+  .menu-element {
+    display: flex;
+    overflow: hidden;
+    align-items: end;
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+
+    &__description {
+      padding: 1rem 0 1rem 1rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      h4,
+      p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      p {
+        margin-top: 4px;
+        font-size: 15px;
+      }
+    }
+
+    &__prix {
+      margin-bottom: 30px;
+      font-weight: 900;
+      margin-left: auto;
+      margin-bottom: 0;
+      padding: 1rem 1rem 1rem 0;
+    }
+
+    &__check {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      $button-width: 4rem;
+      background-color: var(--tertiary-color);
+      width: $button-width;
+      height: 74px;
+      margin-right: -$button-width;
+      transition: margin-right 0.5s ease;
+
+      &__elips {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--primary-color);
+        font-size: 12px;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+
+      i {
+        color: #99e2d0;
+        font-size: medium;
+      }
+    }
+    &:hover .menu-element__check {
+      margin-right: 0;
+    }
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu__card {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.menu__card:nth-of-type(1) {
+  animation-delay: 1.5s;
+}
+
+.menu__card:nth-of-type(2) {
+  animation-delay: 2.5s;
+}
+
+.menu__card:nth-of-type(3) {
+  animation-delay: 3.5s;
+}
