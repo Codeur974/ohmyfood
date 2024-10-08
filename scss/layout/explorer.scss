@@ -1,3 +1,5 @@
+@import "../utils/variables";
+
 .info {
   height: 280px;
   display: flex;
@@ -61,7 +63,7 @@
         lighten($primary-color, 10%) 200%
       );
 
-      box-shadow: 0 12px 24px rgba(30, 30, 30, 0.2); /* Ajoute une ombre plus grande au survol */
+      box-shadow: $box-shadow-hover; /* Ajoute une ombre plus grande au survol */
     }
   }
 }

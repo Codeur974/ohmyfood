@@ -1,3 +1,4 @@
+@import "../utils/variables";
 .resto__button {
   display: flex;
   justify-content: center;
@@ -34,7 +35,7 @@
         lighten($secondary-color, 5%),
         lighten($primary-color, 5%)
       );
-      box-shadow: 0 12px 24px rgba(30, 30, 30, 0.2); /* Ajoute une ombre plus grande au survol */
+      box-shadow: $box-shadow-hover; /* Ajoute une ombre plus grande au survol */
     }
   }
 }

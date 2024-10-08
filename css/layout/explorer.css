@@ -1,17 +1,49 @@
-/* Error: Undefined variable.
- *    ,
- * 43 |       darken($secondary-color, 0%),
- *    |              ^^^^^^^^^^^^^^^^
- *    '
- *   scss\layout\explorer.scss 43:14  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 43 \2502        darken($secondary-color, 0%),\d\a    \2502               ^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\layout\\explorer.scss 43:14  root stylesheet";
+.info {
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--background-color-section);
+  box-sizing: border-box;
+}
+.info__title, .info__subtitle {
+  display: flex;
+  margin: 0;
+  text-align: center;
+}
+.info__title {
+  width: 73%;
+  margin-top: 10px;
+}
+.info__subtitle {
+  width: 84%;
+}
+@media (min-width: 768px) {
+  .info__title, .info__subtitle {
+    width: 100%;
+    justify-content: center;
+  }
+  .info__title {
+    font-size: 40px;
+  }
+}
+.info__button {
+  height: 50px;
+  background: linear-gradient(to bottom, #ff79da, rgb(120, 43.75, 211.25) 200%);
+  color: white;
+  margin: 10px 0 25px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  transition: transform 7s ease, box-shadow 0.3s ease; /* Ajoute une transition pour l'animation */
+}
+.info__button:hover {
+  background: linear-gradient(to bottom, #ff79da, rgb(174, 128.25, 228.75) 200%);
+  box-shadow: 0 12px 24px rgba(30, 30, 30, 0.2); /* Ajoute une ombre plus grande au survol */
 }

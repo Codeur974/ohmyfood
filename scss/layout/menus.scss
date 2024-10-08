@@ -1,4 +1,5 @@
 @use "../utils/mixins";
+@import "../utils/variables";
 .menu {
   position: relative;
   background-color: var(--background-color-section);
@@ -15,17 +16,22 @@
   }
 
   &__title {
+    position: relative;
+    width: 100%;
     display: flex;
     flex-direction: row;
+
     align-items: center;
-    padding: 20px 0;
+    padding: 30px 0;
     font-weight: bold;
     font-size: 18px;
     padding: 0 20px;
 
     .heart-icon {
-      font-size: 1rem;
-      right: 1rem;
+      position: relative;
+
+      margin-left: 80px;
+
       &::before {
         @include mixins.heart;
       }
@@ -45,16 +51,18 @@
     }
 
     h1 {
+      margin-top: 40px;
       line-height: 41px;
       font-style: italic;
       font-family: "shrikhand", serif;
       font-weight: 400;
-      font-size: 28px;
+      font-size: 26px;
     }
   }
 }
 
 .menu__card {
+  margin-top: 45px;
   padding: 10px;
 
   @media (min-width: 767.8px) {
@@ -73,7 +81,7 @@
 
     span {
       padding-bottom: 5px;
-      border-bottom: solid 4px #99e2d0;
+      border-bottom: solid 4px $tertiary-color;
     }
   }
 
@@ -116,7 +124,7 @@
       align-items: center;
       justify-content: center;
       $button-width: 4rem;
-      background-color: var(--tertiary-color);
+      background-color: $tertiary-color;
       width: $button-width;
       height: 74px;
       margin-right: -$button-width;
@@ -130,14 +138,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: var(--primary-color);
+        color: $primary-color;
         font-size: 12px;
         font-weight: bold;
         margin-right: 10px;
       }
 
       i {
-        color: #99e2d0;
+        color: $tertiary-color;
         font-size: medium;
       }
     }
