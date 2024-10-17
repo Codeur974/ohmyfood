@@ -48,10 +48,9 @@ body {
   }
 }
 .loader {
-  position: fixed;
-  left: 50%;
+  position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
+  left: 30%;
   border: 16px solid #f3f3f3;
   border-radius: 50%;
   border-top: 16px solid #3498db;
@@ -59,6 +58,12 @@ body {
   height: 120px;
   animation: spin 3s linear infinite, hideLoader 3s forwards 1s;
   z-index: 9999;
+}
+@media (min-width: 768px) {
+  .loader {
+    left: 50%;
+    top: 50%;
+  }
 }
 
 .main-container {
