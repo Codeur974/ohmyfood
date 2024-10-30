@@ -1,3 +1,4 @@
+@use "sass:color";
 @import "../utils/variables";
 
 .info {
@@ -42,8 +43,8 @@
     height: 50px;
     background: linear-gradient(
       to bottom,
-      darken($secondary-color, 0%),
-      darken($primary-color, 10%) 200%
+      color.adjust($secondary-color, $lightness: 0%),
+      color.adjust($primary-color, $lightness: 10%) 200%
     );
     color: white;
     margin: 10px 0 25px;
@@ -59,8 +60,8 @@
     &:hover {
       background: linear-gradient(
         to bottom,
-        lighten($secondary-color, 0%),
-        lighten($primary-color, 10%) 200%
+        color.adjust($secondary-color, $lightness: 5%),
+        color.adjust($primary-color, $lightness: 20%) 200%
       );
 
       box-shadow: $box-shadow-hover; /* Ajoute une ombre plus grande au survol */

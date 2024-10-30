@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -18,10 +19,12 @@ body {
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+    /* Début de l'animation centrage */
+    /* Début de l'animation centrage */
   }
   100% {
-    transform: rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 @keyframes hideLoader {
@@ -49,13 +52,13 @@ body {
 .loader {
   position: absolute;
   top: 50%;
-  left: 30%;
+  left: 50%;
   border: 16px solid #f3f3f3;
   border-radius: 50%;
   border-top: 16px solid #3498db;
   width: 120px;
   height: 120px;
-  animation: spin 3s linear infinite, hideLoader 3s forwards 1s;
+  animation: spin 0.7s linear infinite, hideLoader 0.7s forwards 1.4s;
   z-index: 9999;
 }
 @media (min-width: 768px) {
@@ -68,7 +71,7 @@ body {
 .main-container {
   visibility: hidden;
   opacity: 0;
-  animation: showContent 2s forwards 1s;
+  animation: showContent 0.5s forwards 1.4s;
 }
 
 a {
