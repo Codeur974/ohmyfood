@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -20,8 +19,6 @@ body {
 @keyframes spin {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
-    /* Début de l'animation centrage */
-    /* Début de l'animation centrage */
   }
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
@@ -29,10 +26,7 @@ body {
 }
 @keyframes hideLoader {
   0% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 1;
+    opacity: 0.4;
   }
   100% {
     opacity: 0;
@@ -41,7 +35,6 @@ body {
 }
 @keyframes showContent {
   0% {
-    visibility: hidden;
     opacity: 0;
   }
   100% {
@@ -53,25 +46,19 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  border: 16px solid #f3f3f3;
+  border: 16px solid #ff79da;
   border-radius: 50%;
-  border-top: 16px solid #3498db;
+  border-top: 16px solid #9356dc;
   width: 120px;
   height: 120px;
-  animation: spin 0.7s linear infinite, hideLoader 0.7s forwards 1.4s;
-  z-index: 9999;
-}
-@media (min-width: 768px) {
-  .loader {
-    left: 50%;
-    top: 50%;
-  }
+  animation: spin 0.7s linear infinite, hideLoader 0.7s forwards 0.8s;
+  z-index: 20;
 }
 
 .main-container {
   visibility: hidden;
   opacity: 0;
-  animation: showContent 0.5s forwards 1.4s;
+  animation: showContent 3s forwards 0.8s;
 }
 
 a {

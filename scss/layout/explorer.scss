@@ -44,7 +44,7 @@
     background: linear-gradient(
       to bottom,
       color.adjust($secondary-color, $lightness: 0%),
-      color.adjust($primary-color, $lightness: 10%) 200%
+      color.adjust($primary-color, $lightness: -10%) 200%
     );
     color: white;
     margin: 10px 0 25px;

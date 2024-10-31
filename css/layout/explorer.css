@@ -1,0 +1,49 @@
+.info {
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--background-color-section);
+  box-sizing: border-box;
+}
+.info__title, .info__subtitle {
+  display: flex;
+  margin: 0;
+  text-align: center;
+}
+.info__title {
+  width: 73%;
+  margin-top: 10px;
+}
+.info__subtitle {
+  width: 84%;
+}
+@media (min-width: 768px) {
+  .info__title, .info__subtitle {
+    width: 100%;
+    justify-content: center;
+  }
+  .info__title {
+    font-size: 40px;
+  }
+}
+.info__button {
+  height: 50px;
+  background: linear-gradient(to bottom, #ff79da, rgb(120, 43.75, 211.25) 200%);
+  color: white;
+  margin: 10px 0 25px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  transition: transform 7s ease, box-shadow 0.3s ease; /* Ajoute une transition pour l'animation */
+}
+.info__button:hover {
+  background: linear-gradient(to bottom, rgb(255, 146.5, 225.0410447761), rgb(201, 170.5, 237.5) 200%);
+  box-shadow: 0 12px 24px rgba(30, 30, 30, 0.2); /* Ajoute une ombre plus grande au survol */
+}
