@@ -1,4 +1,5 @@
 @use "sass:color";
+@use "../utils/mixins";
 @import "../utils/variables";
 
 .info {
@@ -40,31 +41,6 @@
   }
 
   &__button {
-    height: 50px;
-    background: linear-gradient(
-      to bottom,
-      color.adjust($secondary-color, $lightness: 0%),
-      color.adjust($primary-color, $lightness: -10%) 200%
-    );
-    color: white;
-    margin: 10px 0 25px;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: var(--box-shadow);
-    transition: transform 7s ease, box-shadow 0.3s ease; /* Ajoute une transition pour l'animation */
-
-    &:hover {
-      background: linear-gradient(
-        to bottom,
-        color.adjust($secondary-color, $lightness: 5%),
-        color.adjust($primary-color, $lightness: 20%) 200%
-      );
-
-      box-shadow: $box-shadow-hover; /* Ajoute une ombre plus grande au survol */
-    }
+    @include mixins.button;
   }
 }

@@ -1,5 +1,5 @@
-@use "sass:color";
-@import "../utils/variables";
+@use "../utils/mixins";
+
 .resto__button {
   display: flex;
   justify-content: center;
@@ -8,35 +8,6 @@
   }
 
   &__order {
-    height: 50px;
-    width: 186px;
-    background: linear-gradient(
-      to bottom,
-      color.adjust($secondary-color, $lightness: 0%),
-      color.adjust($primary-color, $lightness: -10%)
-    );
-    color: white;
-
-    border: none;
-    padding: 10px 20px;
-    margin: 5px 0px 35px 0px;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: var(--box-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajoute une transition pour l'animation */
-    @media (min-width: 767.8px) {
-      margin-top: 20px;
-    }
-
-    &:hover {
-      background: linear-gradient(
-        to bottom,
-        lighten($secondary-color, 5%),
-        lighten($primary-color, 5%)
-      );
-      box-shadow: $box-shadow-hover; /* Ajoute une ombre plus grande au survol */
-    }
+    @include mixins.button;
   }
 }

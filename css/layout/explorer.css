@@ -31,19 +31,24 @@
 }
 .info__button {
   height: 50px;
-  background: linear-gradient(to bottom, #ff79da, rgb(120, 43.75, 211.25) 200%);
+  background: linear-gradient(to bottom, #ff79da, rgb(120, 43.75, 211.25));
   color: white;
-  margin: 10px 0 25px;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 40px;
+  margin: 5px 0px 35px 0px;
   border-radius: 25px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   box-shadow: var(--box-shadow);
-  transition: transform 7s ease, box-shadow 0.3s ease; /* Ajoute une transition pour l'animation */
+  transition: transform 1s ease, box-shadow 0.3s ease; /* Ajoute une transition pour l'animation */
+}
+@media (min-width: 767.8px) {
+  .info__button {
+    margin-top: 20px;
+  }
 }
 .info__button:hover {
-  background: linear-gradient(to bottom, rgb(255, 146.5, 225.0410447761), rgb(201, 170.5, 237.5) 200%);
+  background: linear-gradient(to bottom, rgb(255, 146.5, 225.0410447761), rgb(133.5, 64.875, 215.625));
   box-shadow: 0 12px 24px rgba(30, 30, 30, 0.2); /* Ajoute une ombre plus grande au survol */
 }
