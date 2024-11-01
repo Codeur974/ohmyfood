@@ -97,10 +97,6 @@
   }
 }
 
-* {
-  font-family: "Roboto", sans-serif;
-}
-
 :root {
   --primary-color: #9356dc;
   --secondary-color: #ff79da;
@@ -108,6 +104,10 @@
   --background-color: #eaeaea;
   --background-color-section: #f6f6f6;
   --box-shadow: 0 4px 6px rgba(10, 10, 10, 0.22);
+}
+
+* {
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -160,6 +160,24 @@ p {
 .navbar__logo__img {
   width: 180px;
   height: 30px;
+}
+
+:root {
+  --primary-color: #9356dc;
+  --secondary-color: #ff79da;
+  --tertiary-color: #99e2d0;
+  --background-color: #eaeaea;
+  --background-color-section: #f6f6f6;
+  --box-shadow: 0 4px 6px rgba(10, 10, 10, 0.22);
+}
+
+:root {
+  --primary-color: #9356dc;
+  --secondary-color: #ff79da;
+  --tertiary-color: #99e2d0;
+  --background-color: #eaeaea;
+  --background-color-section: #f6f6f6;
+  --box-shadow: 0 4px 6px rgba(10, 10, 10, 0.22);
 }
 
 .menu {
@@ -367,6 +385,15 @@ img {
     object-position: center-bottom;
     height: 52vh;
   }
+}
+
+:root {
+  --primary-color: #9356dc;
+  --secondary-color: #ff79da;
+  --tertiary-color: #99e2d0;
+  --background-color: #eaeaea;
+  --background-color-section: #f6f6f6;
+  --box-shadow: 0 4px 6px rgba(10, 10, 10, 0.22);
 }
 
 .resto__button {

@@ -1,4 +1,12 @@
 $box-shadow-hover: 0 12px 24px rgba(30, 30, 30, 0.2);
 $tertiary-color: var(--tertiary-color);
+:root {
+  --primary-color: #9356dc;
+  --secondary-color: #ff79da;
+  --tertiary-color: #99e2d0;
+  --background-color: #eaeaea;
+  --background-color-section: #f6f6f6;
+  --box-shadow: 0 4px 6px rgba(10, 10, 10, 0.22);
+}
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
