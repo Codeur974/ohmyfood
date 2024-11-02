@@ -8,7 +8,7 @@ body {
   width: 100%;
   margin: 0px;
 }
-@include mixins.loaderAnimations(0.7s, 0.8s, 3s);
+@include mixins.loaderAnimations(0.7s, 0.7s, 3s);
 a {
   color: inherit;
   text-decoration: none;

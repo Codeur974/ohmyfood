@@ -35,7 +35,7 @@ body {
 }
 @keyframes hideLoader {
   0% {
-    opacity: 0.7;
+    opacity: 0.8;
   }
   100% {
     opacity: 0;
@@ -44,7 +44,7 @@ body {
 }
 @keyframes showContent {
   0% {
-    opacity: 0.4;
+    opacity: 0.3;
   }
   100% {
     visibility: visible;
@@ -60,14 +60,14 @@ body {
   border-top: 16px solid #9356dc;
   width: 120px;
   height: 120px;
-  animation: spin 0.7s linear infinite, hideLoader 0.7s forwards 0.8s;
+  animation: spin 0.7s linear infinite, hideLoader 0.7s forwards 0.7s;
   z-index: 20;
 }
 
 .main-container {
   visibility: hidden;
   opacity: 0;
-  animation: showContent 3s forwards 0.8s;
+  animation: showContent 3s forwards 0.7s;
 }
 
 a {
