@@ -61,14 +61,14 @@ body {
   border-top: 16px solid #9356dc;
   width: 120px;
   height: 120px;
-  animation: spin 0.7s linear infinite, hideLoader 0.7s forwards 0.7s;
+  animation: spin 0.8s linear infinite, hideLoader 0.8s forwards 1s;
   z-index: 20;
 }
 
 .main-container {
   visibility: hidden;
   opacity: 0;
-  animation: showContent 3s forwards 0.7s;
+  animation: showContent 3s forwards 1s;
 }
 
 a {
@@ -210,7 +210,7 @@ a {
   background: linear-gradient(to bottom, #ff79da, rgb(120, 43.75, 211.25));
   color: white;
   border: none;
-  padding: 10px 40px;
+  padding: 10px 25px;
   margin: 5px 0px 35px 0px;
   border-radius: 25px;
   font-size: 16px;

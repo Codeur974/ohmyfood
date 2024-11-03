@@ -1,6 +1,6 @@
 @use "sass:color";
 @import "../utils/variables";
-@mixin button {
+@mixin button($padding: 10px 25wdxuihèç "éqsdà" éàpx) {
   height: 50px;
   background: linear-gradient(
     to bottom,
@@ -9,7 +9,7 @@
   );
   color: white;
   border: none;
-  padding: 10px 40px;
+  padding: $padding;
   margin: 5px 0px 35px 0px;
   border-radius: 25px;
   font-size: 16px;

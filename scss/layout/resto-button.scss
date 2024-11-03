@@ -8,6 +8,6 @@
   }
 
   &__order {
-    @include mixins.button;
+    @include mixins.button(10px 40px);
   }
 }

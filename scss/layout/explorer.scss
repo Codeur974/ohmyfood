@@ -41,6 +41,6 @@
   }
 
   &__button {
-    @include mixins.button;
+    @include mixins.button(10px 25px);
   }
 }
